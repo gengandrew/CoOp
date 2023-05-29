@@ -22,6 +22,7 @@ import datasets.imagenet_sketch
 import datasets.imagenetv2
 import datasets.imagenet_a
 import datasets.imagenet_r
+import datasets.cifar10
 
 import trainers.coop
 import trainers.cocoop
@@ -151,6 +152,7 @@ def main(args):
 
 
 # python train.py --trainer=CoOp --dataset-config-file configs/datasets/imagenet.yaml --config-file configs/trainers/CoOp/vit_b32.yaml
+# python train.py --trainer=CoOp --dataset-config-file configs/datasets/cifar10.py --config-file configs/trainers/CoOp/vit_cifar_b32.yaml
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=str, default="/nobackup/ageng/datasets", help="path to dataset")
