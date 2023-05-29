@@ -7,7 +7,7 @@ from dassl.utils import listdir_nohidden, mkdir_if_missing
 
 
 @DATASET_REGISTRY.register()
-class CIFAR10(DatasetBase):
+class CLIPCIFAR10(DatasetBase):
 
     dataset_dir = "cifar10"
 
