@@ -152,7 +152,7 @@ def main(args):
 
 
 # python train.py --trainer=CoOp --dataset-config-file configs/datasets/imagenet.yaml --config-file configs/trainers/CoOp/vit_b32.yaml
-# python train.py --trainer=CoOp --dataset-config-file configs/datasets/cifar10.py --config-file configs/trainers/CoOp/vit_cifar_b32.yaml
+# python train.py --trainer=CoOp --dataset-config-file configs/datasets/cifar10.yaml --config-file configs/trainers/CoOp/vit_cifar_b32.yaml
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=str, default="/nobackup/ageng/datasets", help="path to dataset")
