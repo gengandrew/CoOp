@@ -150,10 +150,11 @@ def main(args):
         trainer.train()
 
 
+# python train.py --trainer=CoOp --dataset-config-file configs/datasets/imagenet.yaml --config-file configs/trainers/CoOp/vit_b32.yaml
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--root", type=str, default="", help="path to dataset")
-    parser.add_argument("--output-dir", type=str, default="", help="output directory")
+    parser.add_argument("--root", type=str, default="/nobackup/ageng/datasets", help="path to dataset")
+    parser.add_argument("--output-dir", type=str, default="outputs", help="output directory")
     parser.add_argument(
         "--resume",
         type=str,
@@ -161,7 +162,7 @@ if __name__ == "__main__":
         help="checkpoint directory (from which the training resumes)",
     )
     parser.add_argument(
-        "--seed", type=int, default=-1, help="only positive value enables a fixed seed"
+        "--seed", type=int, default=1, help="only positive value enables a fixed seed"
     )
     parser.add_argument(
         "--source-domains", type=str, nargs="+", help="source domains for DA/DG"
